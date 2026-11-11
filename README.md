@@ -23,7 +23,7 @@ evaluación económica (metodología de la clase 14), ML hidráulico, optimizaci
 
 ## Resultados de la última ejecución
 
-**Fecha del cálculo:** 2026-11-11 · **TRM:** 3,269.88 COP/USD (valor de respaldo de la celda de parámetros (no se pudo consultar en línea: URLError))
+**Fecha del cálculo:** 2026-11-11 · **TRM:** 3,297.07 COP/USD (datos.gov.co (Superfinanciera), vigente del 2026-11-11 al 2026-11-12)
 
 **Requerimientos iniciales:** Q = 28 m³/s · Q ecológico = 4 m³/s · H bruto = 80 m ·
 L = 1200 m · tubería PE100_AGRU D = 2.83 m (automática: menor diámetro que cumple) · accesorios: ENT_ABOCINADA × 1, REJ_RECTANGULAR × 1, CODO_45_RD3 × 4, VAL_MARIPOSA × 2, JUNTA_DILATACION × 2, RED_CONICA × 1
@@ -35,10 +35,10 @@ L = 1200 m · tubería PE100_AGRU D = 2.83 m (automática: menor diámetro que c
 | Turbina | **Francis × 1**, 400 rpm, D3 = 1.70 m, Hs = -4.5 m |
 | Hidráulica | V = 4.45 m/s · ΣK = 1.154 · h_L = 4.68 m (5.85 % de H) · H neto = 75.32 m |
 | Golpe de ariete | cierre mínimo 45 s |
-| CAPEX | **52.1 MUSD** = 170.5 mil millones de COP |
-| VAN · TIR · B/C | **285.1 mil M COP** · **28.3%** · **2.09** |
-| Recuperación | 3.5 años (estático) · 4.6 años (descontado) |
-| LCOE | 192 COP/kWh |
+| CAPEX | **52.1 MUSD** = 171.9 mil millones de COP |
+| VAN · TIR · B/C | **283.2 mil M COP** · **28.1%** · **2.08** |
+| Recuperación | 3.6 años (estático) · 4.6 años (descontado) |
+| LCOE | 193 COP/kWh |
 | P(VAN < 0), Monte Carlo | 0.0% |
 | CO₂ evitado | 86,579 t/año |
 
@@ -52,38 +52,38 @@ L = 1200 m · tubería PE100_AGRU D = 2.83 m (automática: menor diámetro que c
 | Turbina del GB factible en física y catálogo | Francis × 1, 400 rpm, Hs = -4.5 m | ✔ |
 | Caudal ecológico respetado todos los días | 100.0% | ✔ |
 | Potencia menor de 20 MW (planta menor) | 18.24 MW | ✔ |
-| VAN > 0 | 285 mil millones COP | ✔ |
-| TIR > i | 28.3% > 10% | ✔ |
-| B/C > 1 | 2.09 | ✔ |
+| VAN > 0 | 283 mil millones COP | ✔ |
+| TIR > i | 28.1% > 10% | ✔ |
+| B/C > 1 | 2.08 | ✔ |
 
 ### Tuberías que cumplen el diseño frente a la seleccionada
 
 28 tuberías cumplen el diseño. La más barata es **PRFV / GRP Flowtite D = 2.90 m** (ahorro de
-1,374 millones de COP en tubería); la de mayor VAN es **PRFV / GRP Flowtite D = 3.40 m**; el material sugerido es
+1,386 millones de COP en tubería); la de mayor VAN es **PRFV / GRP Flowtite D = 3.40 m**; el material sugerido es
 **PRFV / GRP Flowtite D = 3.40 m**. Las diez primeras, de la más barata a la más cara:
 
 | Material | D [m] | V [m/s] | η_cond [%] | Costo tubería [M COP] | Δ costo tubería [%] | VAN [mil M COP] | Nota |
 |---|---|---|---|---|---|---|---|
-| PRFV / GRP Flowtite | 2.90 | 4.24 | 94.45 | 11,052.76 | -11.06 | 287.81 | ▼ más barata  |
-| PRFV / GRP Flowtite | 3.00 | 3.96 | 95.28 | 11,771.46 | -5.28 | 289.32 |  |
-| PE 100-RC AGRU | 2.83 | 4.45 | 94.15 | 12,427.13 | 0.00 | 285.07 | ◀ seleccionada  |
-| PRFV / GRP Flowtite | 3.10 | 3.71 | 95.96 | 12,512.67 | 0.69 | 290.36 |  |
-| Acero al carbono soldado (a medida) | 2.90 | 4.24 | 94.27 | 13,003.24 | 4.64 | 284.66 |  |
-| PRFV / GRP Flowtite | 3.20 | 3.48 | 96.53 | 13,276.39 | 6.83 | 291.03 |  |
-| Acero al carbono soldado (a medida) | 3.00 | 3.96 | 95.13 | 13,848.78 | 11.44 | 286.10 |  |
-| PE 100-RC AGRU | 3.00 | 3.96 | 95.55 | 13,848.78 | 11.44 | 287.35 |  |
-| PRFV / GRP Flowtite | 3.30 | 3.27 | 97.00 | 14,062.61 | 13.16 | 291.39 |  |
-| Acero al carbono soldado (a medida) | 3.10 | 3.71 | 95.84 | 14,720.79 | 18.46 | 287.05 |  |
+| PRFV / GRP Flowtite | 2.90 | 4.24 | 94.45 | 11,144.66 | -11.06 | 285.92 | ▼ más barata  |
+| PRFV / GRP Flowtite | 3.00 | 3.96 | 95.28 | 11,869.34 | -5.28 | 287.41 |  |
+| PE 100-RC AGRU | 2.83 | 4.45 | 94.15 | 12,530.46 | 0.00 | 283.17 | ◀ seleccionada  |
+| PRFV / GRP Flowtite | 3.10 | 3.71 | 95.96 | 12,616.72 | 0.69 | 288.44 |  |
+| Acero al carbono soldado (a medida) | 2.90 | 4.24 | 94.27 | 13,111.37 | 4.64 | 282.76 |  |
+| PRFV / GRP Flowtite | 3.20 | 3.48 | 96.53 | 13,386.78 | 6.83 | 289.08 |  |
+| Acero al carbono soldado (a medida) | 3.00 | 3.96 | 95.13 | 13,963.93 | 11.44 | 284.17 |  |
+| PE 100-RC AGRU | 3.00 | 3.96 | 95.55 | 13,963.93 | 11.44 | 285.41 |  |
+| PRFV / GRP Flowtite | 3.30 | 3.27 | 97.00 | 14,179.55 | 13.16 | 289.42 |  |
+| Acero al carbono soldado (a medida) | 3.10 | 3.71 | 95.84 | 14,843.20 | 18.46 | 285.10 |  |
 
 ### Escenarios de mercado
 
 | Escenario | Energía [GWh] | Precio [COP/kWh] | VAN [MCOP] | B/C | PB estático [años] | PB dinámico [años] | C_T [MCOP] | Anualidad A [MCOP/año] | LCOE [COP/kWh] | TIR [%] |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1. Venta en bolsa | 144.17 | 573.00 | 504,301.66 | 2.84 | 2.38 | 2.86 | 274,450.82 | 29,113.54 | 201.94 | 41.98 |
-| 2. Contrato bilateral | 144.17 | 327.85 | 191,108.67 | 1.75 | 4.44 | 6.17 | 254,459.77 | 26,992.90 | 187.23 | 22.45 |
-| 3. Conservador | 135.50 | 149.99 | -47,623.26 | 0.80 | 13.08 |  | 239,221.57 | 25,376.44 | 187.28 | 6.48 |
-| 4. Base | 144.17 | 401.40 | 285,066.56 | 2.09 | 3.53 | 4.58 | 260,457.09 | 27,629.09 | 191.64 | 28.33 |
-| 5. Optimista | 147.25 | 773.42 | 781,464.53 | 3.67 | 1.69 | 1.94 | 292,142.06 | 30,990.21 | 210.46 | 59.23 |
+| 1. Venta en bolsa | 144.17 | 573.00 | 502,408.06 | 2.82 | 2.40 | 2.89 | 276,344.42 | 29,314.41 | 203.33 | 41.61 |
+| 2. Contrato bilateral | 144.17 | 327.85 | 189,215.06 | 1.74 | 4.49 | 6.26 | 256,353.38 | 27,193.77 | 188.62 | 22.23 |
+| 3. Conservador | 135.50 | 149.99 | -49,516.87 | 0.79 | 13.24 |  | 241,115.17 | 25,577.32 | 188.76 | 6.37 |
+| 4. Base | 144.17 | 401.40 | 283,172.96 | 2.08 | 3.56 | 4.63 | 262,350.69 | 27,829.96 | 193.04 | 28.06 |
+| 5. Optimista | 147.25 | 773.42 | 779,570.93 | 3.65 | 1.70 | 1.96 | 294,035.67 | 31,191.08 | 211.82 | 58.71 |
 
 ### Gráficas principales
 

@@ -1,7 +1,7 @@
 {
   "fecha_calculo": "2026-11-11",
-  "TRM_COP_USD": 3269.88,
-  "fuente_TRM": "valor de respaldo de la celda de parámetros (no se pudo consultar en línea: URLError)",
+  "TRM_COP_USD": 3297.07,
+  "fuente_TRM": "datos.gov.co (Superfinanciera), vigente del 2026-11-11 al 2026-11-12",
   "parametros": {
     "Q_diseno_m3s": 28.0,
     "Q_eco_m3s": 4.0,
@@ -49,15 +49,15 @@
   },
   "economia": {
     "CAPEX_MUSD": 52.14400192520241,
-    "CAPEX_MCOP": 170504.62901518084,
-    "VAN [MCOP]": 285066.56380883785,
-    "TIR": 0.2832735239296311,
-    "B/C": 2.0944857255007694,
-    "PB estático [años]": 3.5281698651489926,
-    "PB dinámico [años]": 4.577052849521104,
-    "C_T [MCOP]": 260457.08698339472,
-    "Anualidad A [MCOP/año]": 27629.0919892694,
-    "LCOE [COP/kWh]": 191.6437988982159,
+    "CAPEX_MCOP": 171922.4244275271,
+    "VAN [MCOP]": 283172.9588719056,
+    "TIR": 0.2806339584474028,
+    "B/C": 2.079368065695447,
+    "PB estático [años]": 3.561227051537044,
+    "PB dinámico [años]": 4.6302917787709275,
+    "C_T [MCOP]": 262350.691920327,
+    "Anualidad A [MCOP/año]": 27829.964177466652,
+    "LCOE [COP/kWh]": 193.03710958877602,
     "P_VAN_negativo": 0.0
   },
   "ambiente": {
@@ -66,7 +66,7 @@
   "tuberias": {
     "opciones_que_cumplen": 28,
     "mas_barata": "PRFV / GRP Flowtite D = 2.90 m",
-    "ahorro_mas_barata_MCOP": 1374.368924352438,
+    "ahorro_mas_barata_MCOP": 1385.7972003298876,
     "mayor_VAN": "PRFV / GRP Flowtite D = 3.40 m",
     "material_sugerido": "PRFV / GRP Flowtite D = 3.40 m"
   },
@@ -78,9 +78,9 @@
     "Tubería": "PE100_AGRU D = 2.83 m",
     "Pérdidas": "5.85% de Hb",
     "CAPEX": "52.1 MUSD",
-    "VAN base": "285 mil M COP",
-    "TIR base": "28.3%",
-    "B/C": "2.09",
+    "VAN base": "283 mil M COP",
+    "TIR base": "28.1%",
+    "B/C": "2.08",
     "P(VAN < 0)": "0.0%",
     "CO₂ evitado": "86,579 t/año"
   },
@@ -117,17 +117,17 @@
     },
     {
       "Criterio": "VAN > 0",
-      "Resultado": "285 mil millones COP",
+      "Resultado": "283 mil millones COP",
       "Cumple": "✔"
     },
     {
       "Criterio": "TIR > i",
-      "Resultado": "28.3% > 10%",
+      "Resultado": "28.1% > 10%",
       "Cumple": "✔"
     },
     {
       "Criterio": "B/C > 1",
-      "Resultado": "2.09",
+      "Resultado": "2.08",
       "Cumple": "✔"
     }
   ]

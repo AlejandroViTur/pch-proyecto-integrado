@@ -1,13 +1,16 @@
 # 💧 Pequeña Central Hidroeléctrica (PCH) · Proyecto integrado
 
 [![Ejecutar proyecto PCH](https://github.com/AlejandroViTur/pch-proyecto-integrado/actions/workflows/ejecutar_proyecto.yml/badge.svg)](https://github.com/AlejandroViTur/pch-proyecto-integrado/actions/workflows/ejecutar_proyecto.yml)
-[![Informe web](https://img.shields.io/badge/informe-GitHub%20Pages-2a78d6)](https://alejandrovitur.github.io/pch-proyecto-integrado/)
+[![Aplicación web](https://img.shields.io/badge/app-Simulador%20PCH-0f9d92)](https://alejandrovitur.github.io/pch-proyecto-integrado/)
 ![Python](https://img.shields.io/badge/Python-3.14-1baf7a)
 
 Diseño completo de una PCH paso a paso: datos y control de calidad, accesorios y pérdidas, selección de la tubería,
 golpe de ariete, selección de turbina con *Gradient Boosting* verificada con física, energía, mercado XM, CAPEX/OPEX y
 evaluación económica (metodología de la clase 14), ML hidráulico, optimización, comparativo de tuberías y beneficio ambiental.
 
+> **Aplicación web interactiva: [https://alejandrovitur.github.io/pch-proyecto-integrado/](https://alejandrovitur.github.io/pch-proyecto-integrado/)** · cambie caudal, salto, tubería, accesorios, TRM o tasa de
+> descuento y el proyecto completo se recalcula en el navegador.
+>
 > Los resultados de abajo se generan **automáticamente** cada vez que se sube un cambio al repositorio
 > (o al ejecutar el flujo *Ejecutar proyecto PCH* desde la pestaña **Actions**).
 
@@ -16,8 +19,8 @@ evaluación económica (metodología de la clase 14), ML hidráulico, optimizaci
 | Parte | Dónde |
 |---|---|
 | Cuaderno con todo el desarrollo (se ve completo en GitHub) | [`notebooks/PCH_Proyecto_Integrado.ipynb`](notebooks/PCH_Proyecto_Integrado.ipynb) |
-| Informe web navegable | [https://alejandrovitur.github.io/pch-proyecto-integrado/](https://alejandrovitur.github.io/pch-proyecto-integrado/) |
-| Dashboard interactivo (Streamlit) | [`dashboard/app.py`](dashboard/app.py) |
+| **Aplicación web interactiva** (resultados, gráficas y parámetros editables) | [https://alejandrovitur.github.io/pch-proyecto-integrado/](https://alejandrovitur.github.io/pch-proyecto-integrado/) · código en [`app/`](app/) |
+| Dashboard alterno en Streamlit (ejecuta el cuaderno completo) | [`dashboard/app.py`](dashboard/app.py) |
 | Base de datos SQL de entrada | [`base_datos/pch_proyecto.sqlite`](base_datos/pch_proyecto.sqlite) · [`pch_proyecto.sql`](base_datos/pch_proyecto.sql) |
 | Resultados (JSON, CSV y SQL) | [`resultados/`](resultados/) |
 
@@ -284,13 +287,15 @@ FROM v_catalogo_tuberias GROUP BY Material_ID;
 ```bash
 python -m pip install -r requirements.txt
 python base_datos/crear_base_datos.py          # (re)crea la base SQL desde data/
-streamlit run dashboard/app.py                 # dashboard interactivo
+python scripts/construir_app.py                # arma la aplicación web en sitio/
+python -m http.server -d sitio 8000            # la abre en http://localhost:8000
+streamlit run dashboard/app.py                 # dashboard alterno en Streamlit
 jupyter lab notebooks/PCH_Proyecto_Integrado.ipynb   # cuaderno paso a paso
 ```
 
-En el **dashboard** se cambian los requerimientos iniciales (caudal, salto, longitud, material y diámetro de la tubería,
+En la **aplicación web** (y en el dashboard de Streamlit) se cambian los requerimientos iniciales (caudal, salto, longitud, material y diámetro de la tubería,
 tipo y cantidad de accesorios, TRM, tasa de descuento, vida útil, etc.) y se recalcula el proyecto completo con las
-mismas ecuaciones del cuaderno. Para cambiar los resultados de este README, edite la celda **3. Parámetros editables**
+mismas ecuaciones del cuaderno (el motor `app/js/motor.js` reproduce los resultados del cuaderno con error < 10⁻⁸). Para cambiar los resultados de este README, edite la celda **3. Parámetros editables**
 del cuaderno y suba el cambio: el flujo de GitHub lo vuelve a ejecutar.
 
 ### Dashboard en línea
@@ -304,9 +309,10 @@ con la cuenta de GitHub, *Create app* → repositorio `AlejandroViTur/pch-proyec
 data/            archivos fuente (Excel y CSV)
 base_datos/      base SQL del proyecto (.sqlite y .sql) y el script que la crea
 notebooks/       cuaderno con el desarrollo completo (ejecutado)
-pch/motor.py     motor que ejecuta el cuaderno con otros parámetros (lo usa el dashboard)
+app/             aplicación web (HTML, CSS y el motor de cálculo en JavaScript) que se publica en GitHub Pages
+pch/motor.py     motor que ejecuta el cuaderno con otros parámetros (lo usa el dashboard de Streamlit)
 dashboard/       dashboard interactivo en Streamlit
 resultados/      resumen.json, tablas CSV, pch_resultados.sqlite y gráficas
-scripts/         generador de este README
-.github/         flujo que ejecuta el proyecto y publica el informe
+scripts/         generador de este README y de la aplicación web
+.github/         flujo que ejecuta el proyecto y publica la aplicación
 ```

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Simulador PCH</title>
+  <meta name="description" content="Diseño interactivo de una pequeña central hidroeléctrica: hidráulica, tubería, turbina, energía, mercado XM y evaluación económica.">
+  <meta name="theme-color" content="#08323f">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <button type="button" class="btn-icono solo-movil" id="abrir-param" aria-label="Abrir parámetros">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <div class="marca">
+      <img src="icono.svg" alt="" width="34" height="34">
+      <div>
+        <b>Simulador PCH</b>
+        <span>Pequeña central hidroeléctrica · proyecto integrado</span>
+      </div>
+    </div>
+    <div class="barra-der">
+      <div class="chip-trm" id="chip-trm" title="Tasa representativa del mercado">
+        <i class="punto"></i><span>TRM</span><b id="trm-valor">—</b>
+      </div>
+      <button type="button" class="btn-barra" id="btn-compartir" title="Copiar un enlace con estos parámetros">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="solo-escritorio">Compartir</span>
+      </button>
+      <a class="btn-barra" id="enlace-repo" href="#" target="_blank" rel="noopener" title="Repositorio en GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        <span class="solo-escritorio">GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <nav class="pestanas" id="pestanas" aria-label="Secciones">
+    <button type="button" data-tab="resumen" class="activa">Resumen</button>
+    <button type="button" data-tab="hidraulica">Hidráulica</button>
+    <button type="button" data-tab="tuberias">Tuberías</button>
+    <button type="button" data-tab="turbina">Turbina</button>
+    <button type="button" data-tab="energia">Energía</button>
+    <button type="button" data-tab="economia">Economía</button>
+    <button type="button" data-tab="optimizacion">Optimización</button>
+    <button type="button" data-tab="datos">Datos y fuentes</button>
+  </nav>
+
+  <div class="estructura">
+    <aside class="panel-param" id="panel-param" aria-label="Requerimientos iniciales">
+      <div class="param-cabeza">
+        <div>
+          <h2>Requerimientos iniciales</h2>
+          <p>Cambie cualquier valor: el proyecto se recalcula al instante.</p>
+        </div>
+        <button type="button" class="btn-icono solo-movil" id="cerrar-param" aria-label="Cerrar parámetros">✕</button>
+      </div>
+      <form id="form-param" autocomplete="off" onsubmit="return false"></form>
+      <div class="param-pie">
+        <button type="button" class="btn sec" id="btn-restablecer">Restablecer valores del proyecto</button>
+      </div>
+    </aside>
+    <div class="velo" id="velo"></div>
+
+    <main id="contenido">
+      <div id="estado" class="estado" hidden></div>
+      <div id="avisos"></div>
+      <section class="vista" id="v-resumen"></section>
+      <section class="vista" id="v-hidraulica" hidden></section>
+      <section class="vista" id="v-tuberias" hidden></section>
+      <section class="vista" id="v-turbina" hidden></section>
+      <section class="vista" id="v-energia" hidden></section>
+      <section class="vista" id="v-economia" hidden></section>
+      <section class="vista" id="v-optimizacion" hidden></section>
+      <section class="vista" id="v-datos" hidden></section>
+      <footer class="pie" id="pie"></footer>
+    </main>
+  </div>
+
+  <dialog id="visor" class="visor">
+    <button type="button" class="btn-icono cerrar" aria-label="Cerrar">✕</button>
+    <img alt="">
+    <p></p>
+  </dialog>
+  <div id="toast" class="toast" hidden></div>
+  <button type="button" class="fab solo-movil" id="fab-param">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    Requerimientos
+  </button>
+
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="js/motor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

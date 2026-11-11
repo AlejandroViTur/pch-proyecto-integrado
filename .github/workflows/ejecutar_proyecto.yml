@@ -35,10 +35,10 @@ jobs:
       - name: Ejecutar el cuaderno completo (TRM del día en línea)
         run: jupyter nbconvert --to notebook --execute --inplace notebooks/PCH_Proyecto_Integrado.ipynb --ExecutePreprocessor.timeout=1800
 
-      - name: Generar el informe web y el README
+      - name: Generar el README y la aplicación web
         run: |
-          jupyter nbconvert --to html notebooks/PCH_Proyecto_Integrado.ipynb --output-dir sitio --output index
           python scripts/generar_readme.py
+          python scripts/construir_app.py
 
       - name: Guardar los resultados en el repositorio
         run: |
@@ -52,7 +52,7 @@ jobs:
         with:
           path: sitio
 
-  publicar-informe:
+  publicar-app:
     # Requiere activar una vez: Settings → Pages → Source: GitHub Actions.
     needs: ejecutar
     runs-on: ubuntu-latest

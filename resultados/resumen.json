@@ -1,0 +1,134 @@
+{
+  "fecha_calculo": "2026-11-11",
+  "TRM_COP_USD": 3269.88,
+  "fuente_TRM": "valor de respaldo de la celda de parámetros (no se pudo consultar en línea: URLError)",
+  "parametros": {
+    "Q_diseno_m3s": 28.0,
+    "Q_eco_m3s": 4.0,
+    "H_bruto_m": 80.0,
+    "L_m": 1200.0,
+    "material": "PE100_AGRU",
+    "D_m": 2.83,
+    "seleccion_tuberia": "automática: menor diámetro que cumple",
+    "accesorios": {
+      "ENT_ABOCINADA": 1,
+      "REJ_RECTANGULAR": 1,
+      "CODO_45_RD3": 4,
+      "VAL_MARIPOSA": 2,
+      "JUNTA_DILATACION": 2,
+      "RED_CONICA": 1
+    },
+    "i_desc": 0.1,
+    "vida_util_anios": 30,
+    "frac_contrato": 0.7
+  },
+  "hidraulica": {
+    "K_total": 1.1537898454732047,
+    "V_m_s": 4.451386239381757,
+    "hf_m": 3.5124622200135986,
+    "hm_m": 1.1652477344332768,
+    "hL_m": 4.677709954446875,
+    "perdida_pct": 5.847137443058594,
+    "H_neto_m": 75.32229004555313
+  },
+  "golpe_ariete": {
+    "T_cierre_min_s": 45.37600651765298,
+    "sobrepresion_cierre_m": 108.90241564236715
+  },
+  "turbina": {
+    "tipo": "Francis",
+    "unidades": 1,
+    "rpm": 400.0,
+    "D3_m": 1.703764328972282,
+    "Hs_m": -4.538019203162362
+  },
+  "energia": {
+    "P_MW": 18.236443939523383,
+    "E_GWh_anio": 142.63487689040068,
+    "factor_planta": 0.968642139187405
+  },
+  "economia": {
+    "CAPEX_MUSD": 52.14400192520241,
+    "CAPEX_MCOP": 170504.62901518084,
+    "VAN [MCOP]": 285066.56380883785,
+    "TIR": 0.2832735239296311,
+    "B/C": 2.0944857255007694,
+    "PB estático [años]": 3.5281698651489926,
+    "PB dinámico [años]": 4.577052849521104,
+    "C_T [MCOP]": 260457.08698339472,
+    "Anualidad A [MCOP/año]": 27629.0919892694,
+    "LCOE [COP/kWh]": 191.6437988982159,
+    "P_VAN_negativo": 0.0
+  },
+  "ambiente": {
+    "CO2_t_anio": 86579.37027247321
+  },
+  "tuberias": {
+    "opciones_que_cumplen": 28,
+    "mas_barata": "PRFV / GRP Flowtite D = 2.90 m",
+    "ahorro_mas_barata_MCOP": 1374.368924352438,
+    "mayor_VAN": "PRFV / GRP Flowtite D = 3.40 m",
+    "material_sugerido": "PRFV / GRP Flowtite D = 3.40 m"
+  },
+  "kpi": {
+    "Potencia instalada": "18.24 MW",
+    "Energía neta media": "142.6 GWh/año",
+    "Factor de planta": "97%",
+    "Turbina (GB + física)": "Francis × 1, 400 rpm",
+    "Tubería": "PE100_AGRU D = 2.83 m",
+    "Pérdidas": "5.85% de Hb",
+    "CAPEX": "52.1 MUSD",
+    "VAN base": "285 mil M COP",
+    "TIR base": "28.3%",
+    "B/C": "2.09",
+    "P(VAN < 0)": "0.0%",
+    "CO₂ evitado": "86,579 t/año"
+  },
+  "verificacion": [
+    {
+      "Criterio": "Velocidad en la tubería ≤ 5 m/s",
+      "Resultado": "4.45 m/s",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "Pérdidas hidráulicas ≤ 6 % de Hb",
+      "Resultado": "5.85%",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "Sobrepresión ≤ 30 % de Hb con el cierre especificado",
+      "Resultado": "cierre ≥ 45 s",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "Turbina del GB factible en física y catálogo",
+      "Resultado": "Francis × 1, 400 rpm, Hs = -4.5 m",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "Caudal ecológico respetado todos los días",
+      "Resultado": "100.0%",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "Potencia menor de 20 MW (planta menor)",
+      "Resultado": "18.24 MW",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "VAN > 0",
+      "Resultado": "285 mil millones COP",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "TIR > i",
+      "Resultado": "28.3% > 10%",
+      "Cumple": "✔"
+    },
+    {
+      "Criterio": "B/C > 1",
+      "Resultado": "2.09",
+      "Cumple": "✔"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+ID,Accesorio,Detalle,Cantidad,K total,h_m [m],% de h_m
+ENT_ABOCINADA,Entrada a la tubería,"abocinada o campana, r/D ≥ 0,15",1,0.04,0.04039722620215548,3.466835850301211
+REJ_RECTANGULAR,Rejilla de entrada,"barras rectangulares, t = 12 mm, b = 50 mm, φ = 75°",1,0.021789845473204426,0.02200623291227632,1.8885454364757166
+CODO_45_RD3,Codo 45°,radio de curvatura r/D = 3,4,0.44200000000000006,0.4463893495338182,38.30853614582839
+VAL_MARIPOSA,Válvula mariposa,100 % abierta (guarda o admisión),2,0.5,0.5049653275269436,43.335448128765144
+JUNTA_DILATACION,Junta de dilatación,telescópica,2,0.1,0.10099306550538871,8.667089625753029
+RED_CONICA,Reducción cónica,"gradual, ángulo ≤ 10° (p. ej. llegada a la espiral)",1,0.05,0.050496532752694355,4.333544812876514
+TOTAL,TOTAL,,11,1.1537898454732047,1.1652477344332766,100.0

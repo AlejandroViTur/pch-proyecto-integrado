@@ -1,0 +1,7 @@
+ID,Categoria,Accesorio,Detalle,Cantidad,K unitario,K total,Fuente
+ENT_ABOCINADA,Entrada,Entrada a la tubería,"abocinada o campana, r/D ≥ 0,15",1,0.04,0.04,"Idelchik, Handbook of Hydraulic Resistance, 3a ed."
+REJ_RECTANGULAR,Rejilla,Rejilla de entrada,"barras rectangulares, t = 12 mm, b = 50 mm, φ = 75°",1,0.021789845473204426,0.021789845473204426,"ESHA, Guide on How to Develop a Small Hydropower Plant (2004), cap. 5"
+CODO_45_RD3,Codo,Codo 45°,radio de curvatura r/D = 3,4,0.11050000000000001,0.44200000000000006,"Idelchik, Handbook of Hydraulic Resistance, 3a ed.; ESHA, Guide on How to Develop a Small Hydropower Plant (2004), cap. 5"
+VAL_MARIPOSA,Válvula,Válvula mariposa,100 % abierta (guarda o admisión),2,0.25,0.5,"Idelchik, Handbook of Hydraulic Resistance, 3a ed."
+JUNTA_DILATACION,Junta y pieza,Junta de dilatación,telescópica,2,0.05,0.1,"Idelchik, Handbook of Hydraulic Resistance, 3a ed."
+RED_CONICA,Cambio de sección,Reducción cónica,"gradual, ángulo ≤ 10° (p. ej. llegada a la espiral)",1,0.05,0.05,"Idelchik, Handbook of Hydraulic Resistance, 3a ed."

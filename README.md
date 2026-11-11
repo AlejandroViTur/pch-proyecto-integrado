@@ -1,7 +1,7 @@
 # 💧 Pequeña Central Hidroeléctrica (PCH) · Proyecto integrado
 
-[![Ejecutar proyecto PCH](https://github.com/OWNER/pch-proyecto-integrado/actions/workflows/ejecutar_proyecto.yml/badge.svg)](https://github.com/OWNER/pch-proyecto-integrado/actions/workflows/ejecutar_proyecto.yml)
-[![Informe web](https://img.shields.io/badge/informe-GitHub%20Pages-2a78d6)](https://owner.github.io/pch-proyecto-integrado/)
+[![Ejecutar proyecto PCH](https://github.com/AlejandroViTur/pch-proyecto-integrado/actions/workflows/ejecutar_proyecto.yml/badge.svg)](https://github.com/AlejandroViTur/pch-proyecto-integrado/actions/workflows/ejecutar_proyecto.yml)
+[![Informe web](https://img.shields.io/badge/informe-GitHub%20Pages-2a78d6)](https://alejandrovitur.github.io/pch-proyecto-integrado/)
 ![Python](https://img.shields.io/badge/Python-3.14-1baf7a)
 
 Diseño completo de una PCH paso a paso: datos y control de calidad, accesorios y pérdidas, selección de la tubería,
@@ -16,7 +16,7 @@ evaluación económica (metodología de la clase 14), ML hidráulico, optimizaci
 | Parte | Dónde |
 |---|---|
 | Cuaderno con todo el desarrollo (se ve completo en GitHub) | [`notebooks/PCH_Proyecto_Integrado.ipynb`](notebooks/PCH_Proyecto_Integrado.ipynb) |
-| Informe web navegable | [https://owner.github.io/pch-proyecto-integrado/](https://owner.github.io/pch-proyecto-integrado/) |
+| Informe web navegable | [https://alejandrovitur.github.io/pch-proyecto-integrado/](https://alejandrovitur.github.io/pch-proyecto-integrado/) |
 | Dashboard interactivo (Streamlit) | [`dashboard/app.py`](dashboard/app.py) |
 | Base de datos SQL de entrada | [`base_datos/pch_proyecto.sqlite`](base_datos/pch_proyecto.sqlite) · [`pch_proyecto.sql`](base_datos/pch_proyecto.sql) |
 | Resultados (JSON, CSV y SQL) | [`resultados/`](resultados/) |
@@ -296,7 +296,7 @@ del cuaderno y suba el cambio: el flujo de GitHub lo vuelve a ejecutar.
 ### Dashboard en línea
 
 El dashboard se puede publicar gratis en **Streamlit Community Cloud**: entrar a [share.streamlit.io](https://share.streamlit.io)
-con la cuenta de GitHub, *Create app* → repositorio `OWNER/pch-proyecto-integrado`, rama `main`, archivo `dashboard/app.py` → *Deploy*.
+con la cuenta de GitHub, *Create app* → repositorio `AlejandroViTur/pch-proyecto-integrado`, rama `main`, archivo `dashboard/app.py` → *Deploy*.
 
 ## Estructura
 
